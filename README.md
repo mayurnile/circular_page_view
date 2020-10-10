@@ -4,7 +4,7 @@ A new Flutter package for Android, iOS & Web which helps in creating animated ci
 
 ##Preview
 
-![Preview](./assets/preview.gif)
+![](./assets/preview.gif)
 
 
 ## Usage
