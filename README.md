@@ -18,6 +18,7 @@ dependencies:
 
 ```dart
 import 'package:circular_page_view/circular_page_view.dart';
+```
 
 - Use of the Widget
 
