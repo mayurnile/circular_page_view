@@ -2,6 +2,11 @@
 
 A new Flutter package for Android, iOS & Web which helps in creating animated circular carousel with configurable settings.
 
+##Preview
+
+![Preview](./assets/preview.gif)
+
+
 ## Usage
 
 ```
