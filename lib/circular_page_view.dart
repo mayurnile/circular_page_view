@@ -7,11 +7,14 @@ class CircularPageView extends StatefulWidget {
   final PageController controller;
   final int itemCount;
   final List<Widget> items;
+
   ///Function to access the PageChanged status and returns currently Active Index
   final Function(int) onPageChanged;
+
   ///Value to control the amount of circular effect you want to create.
   ///It accepts value between 0.0 and 1.0
   final double innerRadius;
+
   ///Value to control the amount of offset you want the widgets to move down
   ///Best values range (100 - 300)
   final double offset;
@@ -20,7 +23,7 @@ class CircularPageView extends StatefulWidget {
     @required this.controller,
     @required this.itemCount,
     @required this.items,
-    @required this.onPageChanged,
+    this.onPageChanged,
     this.innerRadius = 0.5,
     this.offset = 150.0,
   });
@@ -30,22 +33,15 @@ class CircularPageView extends StatefulWidget {
 }
 
 class _CircularPageViewState extends State<CircularPageView> {
-  int _currentPage;
-
-  @override
-  void initState() {
-    super.initState();
-
-    _currentPage = widget.controller.initialPage ?? 0;
-
-  }
-
   @override
   Widget build(BuildContext context) {
     return PageView.builder(
       controller: widget.controller,
       itemCount: widget.itemCount,
-      itemBuilder: (context, index) => _buildPage(index, widget.items[index]),
+      itemBuilder: (context, index) => _buildPage(
+        index,
+        widget.items[index],
+      ),
       onPageChanged: widget.onPageChanged,
     );
   }
@@ -61,7 +57,10 @@ class _CircularPageViewState extends State<CircularPageView> {
           return Align(
             alignment: Alignment.center,
             child: Transform.translate(
-              offset: Offset(0, -(Curves.ease.transform(value) * widget.offset)),
+              offset: Offset(
+                0,
+                -(Curves.ease.transform(value) * widget.offset),
+              ),
               child: child,
             ),
           );
@@ -69,7 +68,10 @@ class _CircularPageViewState extends State<CircularPageView> {
           return Align(
             alignment: Alignment.center,
             child: Transform.translate(
-              offset: Offset(0.0, -(Curves.ease.transform(index == 0 ? value : value * widget.innerRadius) * widget.offset)),
+              offset: Offset(
+                0.0,
+                -(Curves.ease.transform(index == 0 ? value : value * widget.innerRadius) * widget.offset),
+              ),
               child: child,
             ),
           );
@@ -79,4 +81,3 @@ class _CircularPageViewState extends State<CircularPageView> {
     );
   }
 }
-

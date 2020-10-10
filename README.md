@@ -3,6 +3,7 @@
  A new Flutter package for Android, iOS & Web which helps in creating animated circular carousel with configurable settings.
 
 ### Preview
+
 ![](./assets/preview.gif)
 
 
@@ -13,6 +14,7 @@
 dependencies:
   circular_page_view: ^0.0.1
 ```
+
 - Import in the file
 
 ```dart
@@ -31,3 +33,4 @@ CircularPageView(
   offset: 150,
 ),
 ```
+
