@@ -1,6 +1,6 @@
 name: circular_page_view
-description: A new Flutter package to create animated circular carousel.
-version: 0.0.1
+description: A Flutter package for Android, iOS & Web which helps creating animated circular page views with customizable options.
+version: 0.0.2
 homepage: https://github.com/mayurnile/circular_page_view.git
 
 environment:

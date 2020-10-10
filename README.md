@@ -2,18 +2,19 @@
 
 A new Flutter package for Android, iOS & Web which helps in creating animated circular carousel with configurable settings.
 
-#Preview
+# Preview
 ![](./assets/preview.gif)
 
 
 ## Usage
 
-```
+
 - Import the package
-```pubspec.yaml
+```
 dependencies:
   circular_page_view: ^0.0.1
 ```
+
 - Import in the file
 
 ```dart
@@ -23,7 +24,6 @@ import 'package:circular_page_view/circular_page_view.dart';
 - Use of the Widget
 
 ```dart
-
 CircularPageView(
   itemCount: 8,
   controller: _pageController,
@@ -32,3 +32,4 @@ CircularPageView(
   innerRadius: 0.8,
   offset: 150,
 ),
+```
